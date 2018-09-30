@@ -1,3 +1,7 @@
+* Course website: https://btholt.github.io/complete-intro-to-react-v4/
+* Repo : https://github.com/btholt/complete-intro-to-react-v4 
+
+
 create  prettier .prettierrc config file
 create .eslint.json config file
 set eslint config

@@ -21,5 +21,8 @@
     "parcel-bundler": "^1.10.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
+  },
+  "dependencies": {
+    "petfinder-client": "0.0.3"
   }
 }
