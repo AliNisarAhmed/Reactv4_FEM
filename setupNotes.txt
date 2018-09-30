@@ -1,0 +1,8 @@
+create  prettier .prettierrc config file
+create .eslint.json config file
+set eslint config
+npm install -D eslint eslint-config-prettier eslint-plugin-prettier
+npm install parcel-bundler
+
+npm install -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+
