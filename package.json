@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^5.6.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
