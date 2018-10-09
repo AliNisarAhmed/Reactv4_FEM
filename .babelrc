@@ -1,8 +1,8 @@
 {
-  "preset": [
-    "babel-preset-react",
+  "presets": [
+    "react",
     [
-      "babel-preset-env", 
+      "env", 
       {
         "targets": {
           "browsers": ["last 2 versions"]
@@ -10,5 +10,5 @@
       }
     ]
   ],
-  "plugins": ["babel-plugin-transform-class-properties"]
+  "plugins": ["transform-class-properties"]
 }
