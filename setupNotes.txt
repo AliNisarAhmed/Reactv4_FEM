@@ -15,3 +15,6 @@ install @reach/router (REACH ROUTER)
 
 npm install -D babel-eslint babel-core babel-preset-env babel-plugin-tranform-class-
 properties babel-preset-react  // All this to set up babel to remove constructor
+
+
+in .eslintrc.json => we set (in env) "jest": true

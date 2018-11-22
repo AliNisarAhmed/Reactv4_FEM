@@ -1,11 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Results from './Results';
-import { Router, Link } from "@reach/router";
-import Details from './Details';
-import SearchParams from './SearchParams';
+// import Results from './Results';
+import { Router } from "@reach/router";
+// import Details from './Details';   // We only want to load this page when the user clicks on it
+// import SearchParams from './SearchParams';
 import pf from 'petfinder-client';
 import SearchContext from './SearchContext';
+import Navbar from './Navbar';
+import Loadable from 'react-loadable';
+
+const LoadableDetals = Loadable({
+  loader: () => import('./Details'),
+  loading () {
+    return <h1>Loading all split out code</h1>
+  }
+});
+
+const LoadableResults = Loadable({
+  loader: () => import('./Results'),
+  loading () {
+    return <h1>Loading all split out code</h1>
+  }
+});
+
+const LoadableSearchParams = Loadable({
+  loader: () => import('./SearchParams'),
+  loading () {
+    return <h1>Loading all split out code</h1>
+  }
+});
 
 const petfinder = pf({
   key: process.env.API_KEY,
@@ -70,21 +93,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <header>
-          <Link to="/">
-            Adopt Me!
-          </Link>
-          <Link to="/search-params">
-            <span aria-label="search" role="img">
-              🔍
-            </span>
-          </Link>
-        </header>
+        <Navbar />
         <SearchContext.Provider value={this.state}>
           <Router>
-            <Results path="/" />
-            <Details path="/details/:id" />
-            <SearchParams path="/search-params" />
+            <LoadableResults path="/" />
+            <LoadableDetals path="/details/:id" />
+            <LoadableSearchParams path="/search-params" />
           </Router>
         </SearchContext.Provider>
         

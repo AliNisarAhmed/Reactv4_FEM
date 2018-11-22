@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --silent",
+    "testu": "jest --silent -u",
+    "testw": "jest --silent --watch",
+    "testc": "jest --silent --coverage",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
@@ -23,12 +26,17 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.7.0",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
     "parcel-bundler": "^1.10.1",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.6.3"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "petfinder-client": "0.0.3"
+    "emotion": "^9.2.12",
+    "petfinder-client": "0.0.3",
+    "react-emotion": "^9.2.12",
+    "react-loadable": "^5.5.0"
   }
 }
